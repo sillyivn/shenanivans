@@ -1,25 +1,52 @@
-<!DOCTYPE html> <!-- defines document type -->
-<html lang="en"> <!-- defines HTML document -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <!-- link to CSS file -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ivan Zhuo</title>
+
+    <!--
+      Google Fonts: loads typefaces from Google's CDN.
+
+      The two <link rel="preconnect"> lines above speed up the font load
+      by opening a connection to Google's servers early.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link to external CSS stylesheet. -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
-        <div class = "logo">My Portfolio</div>
-        <button id="theme-btn">Toggle Theme</button>
+        <div class="logo">Ivan Zhuo</div>
+
+        <nav>
+            <ul>
+                <li><a href="#projects">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="download-btn">Resume</button>
+            <button id="theme-btn">Toggle Theme</button>
+        </div>
     </header>
 
+
     <main class="container">
-        <section class="hero">
-            <h1>Hi, I'm Ivan 👋</h1>
+        <section class="hero" id="home">
+            <h1>Hi there,</h1>
+            <h1>I'm Ivan</h1>
             <p>Welcome to my personal website</p>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>My Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -35,10 +62,31 @@
         </section>
     </main>
 
-    <!-- link to javascript file -->
-    <script src = "script.js"></script>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Ivan Zhuo</p>
+        <ul class="footer-links">
+            <li><a href="https://github.com/sillyivn"
+                   target="_blank"
+                   style="font-size:24px"
+                   class="fa">&#xf09b;
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/zhuoivan"
+                   target="_blank"
+                   style="font-size:24px"
+                   class="fa">&#xf08c;
+            </li>
+        </ul>
+    </footer>
+
+    <!-- link to javascript file MUST BE AT BOTTOM-->
+    <script src="script.js"></script>
+
 </body>
 </html>
+
 
 <!--
 <h1>Hi,</h1>

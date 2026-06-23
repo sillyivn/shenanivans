@@ -1,17 +1,77 @@
-/* Universal Resets */
+/* Global Reset and Variables */
+:root {
+    --bg-color: #f4f7f6;
+    --text-primary: black;
+    --text-secondary: black;
+    --accent: black;
+    --card-bg: white;
+    --border: white;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     transition: background 0.3s, color 0.3s;
 }
 
-/* Light Mode Variables */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     line-height: 1.6;
+}
+
+/* Layout Container */
+
+main, header, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* NAVIGATION BAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    border-bottom: 1px solid var(--accent);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+}
+
+nav a{
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+nav a:hover {
+    color: var(--accent);
 }
 
 /* Dark Mode Overrides */
@@ -21,14 +81,7 @@ body.dark-mode {
 }
 
 /* Layout Elements */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+
 body.dark-mode header {
     background: #2a2a2a;
 }
@@ -60,10 +113,42 @@ body.dark-mode .card {
     background: #2a2a2a;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+    border-top: 1px solid var(--accent);
+    margin-top: 4rem;
+}
+footer p {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;               /* space between GitHub and LinkedIn */
+}
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+.footer-links a:hover {
+    color: var(--accent);
+}
+
 button {
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 4px;
     border: 1px solid #ccc;
     background: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
